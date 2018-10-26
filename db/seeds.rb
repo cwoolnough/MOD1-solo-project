@@ -20,38 +20,44 @@ c6 = Competitor.create(name:"gavin", age:31, height:"6,1ft", weight:80, gender:"
 
 #metcon
 
-metcon1 = Metcon.create(name:"metcon 1", time:"08:00", date:"24.10.18", experience_level:"beginner")
-metcon2 = Metcon.create(name:"metcon 2", time:"13:00", date:"24.10.18", experience_level:"advanced")
-metcon3 = Metcon.create(name:"metcon 3", time:"18:00", date:"24.10.18", experience_level:"intermediate")
-metcon4 = Metcon.create(name:"metcon 4", time:"19:00", date:"24.10.18", experience_level:"advanced")
-metcon5 = Metcon.create(name:"metcon 5", time:"20:00", date:"24.10.18", experience_level:"intermediate")
-metcon6 = Metcon.create(name:"metcon 6", time:"21:00", date:"24.10.18", experience_level:"advanced")
+battleground = Metcon.create(name:"battleground", time:"08:00", date:"24.10.18", experience_level:"beginner")
+chaos = Metcon.create(name:"chaos", time:"13:00", date:"24.10.18", experience_level:"advanced")
+grit = Metcon.create(name:"grit", time:"18:00", date:"24.10.18", experience_level:"intermediate")
+intimidation = Metcon.create(name:"intimidation", time:"19:00", date:"24.10.18", experience_level:"advanced")
+sweat = Metcon.create(name:"sweat", time:"20:00", date:"24.10.18", experience_level:"intermediate")
+speed_ladder = Metcon.create(name:"speed ladder", time:"21:00", date:"24.10.18", experience_level:"advanced")
 
 
 
 #exercise
 
-exercise1 = Exercise.create(name:"bar muscle up")
-exercise2 = Exercise.create(name:"dumbbell snatch")
-exercise3 = Exercise.create(name:"deadlift")
-exercise4 = Exercise.create(name:"assault bike")
-exercise5 = Exercise.create(name:"row")
-exercise6 = Exercise.create(name:"press ups")
+bar_muscle_up = Exercise.create(name:"bar muscle up")
+dumbbell_snatch = Exercise.create(name:"dumbbell snatch")
+deadlift = Exercise.create(name:"deadlift")
+assault_bike = Exercise.create(name:"assault bike")
+row = Exercise.create(name:"row")
+press_ups = Exercise.create(name:"press ups")
 
 #metcon_exercises
 
-me1 = MetconExercise.create(metcon: metcon2, exercise: exercise3)
-me2 = MetconExercise.create(metcon: metcon2, exercise: exercise4)
-me3 = MetconExercise.create(metcon: metcon4, exercise: exercise3)
-me4 = MetconExercise.create(metcon: metcon5, exercise: exercise6)
-me5 = MetconExercise.create(metcon: metcon4, exercise: exercise2)
-me6 = MetconExercise.create(metcon: metcon6, exercise: exercise3)
+me1 = MetconExercise.create(metcon: chaos, exercise: deadlift)
+me2 = MetconExercise.create(metcon: chaos, exercise: assault_bike)
+me3 = MetconExercise.create(metcon: intimidation, exercise: deadlift)
+me4 = MetconExercise.create(metcon: sweat, exercise: press_ups)
+me5 = MetconExercise.create(metcon: intimidation, exercise: dumbbell_snatch)
+me6 = MetconExercise.create(metcon: speed_ladder, exercise: bar_muscle_up)
 
 #metcon_competitor
 
-mc1 = MetconCompetitor.create(competitor: c1, metcon: metcon1)
-mc2 = MetconCompetitor.create(competitor: c2, metcon: metcon1)
-mc3 = MetconCompetitor.create(competitor: c3, metcon: metcon2)
-mc4 = MetconCompetitor.create(competitor: c4, metcon: metcon3)
-mc5 = MetconCompetitor.create(competitor: c5, metcon: metcon2)
-mc6 = MetconCompetitor.create(competitor: c6, metcon: metcon1) 
+mc1 = MetconCompetitor.create(competitor: c1, metcon: battleground)
+mc2 = MetconCompetitor.create(competitor: c2, metcon: battleground)
+mc3 = MetconCompetitor.create(competitor: c3, metcon: grit)
+mc4 = MetconCompetitor.create(competitor: c4, metcon: grit)
+mc5 = MetconCompetitor.create(competitor: c5, metcon: chaos)
+mc6 = MetconCompetitor.create(competitor: c6, metcon: battleground) 
+
+
+
+
+
+

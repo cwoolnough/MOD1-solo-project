@@ -34,8 +34,6 @@ ActiveRecord::Schema.define(version: 2018_10_23_125234) do
   end
 
   create_table "metcon_competitors", force: :cascade do |t|
-    t.string "metcon"
-    t.string "competitor"
     t.integer "metcon_id"
     t.integer "competitor_id"
     t.index ["competitor_id"], name: "index_metcon_competitors_on_competitor_id"
@@ -43,8 +41,6 @@ ActiveRecord::Schema.define(version: 2018_10_23_125234) do
   end
 
   create_table "metcon_exercises", force: :cascade do |t|
-    t.string "metcon"
-    t.string "exercise"
     t.integer "metcon_id"
     t.integer "exercise_id"
     t.index ["exercise_id"], name: "index_metcon_exercises_on_exercise_id"

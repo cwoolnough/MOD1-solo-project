@@ -17,8 +17,6 @@ class CreateMetconCompetitors < ActiveRecord::Migration[5.2]
     end
 
     create_table :metcon_competitors do |t|
-      t.string :metcon
-      t.string :competitor
       t.belongs_to :metcon
       t.belongs_to :competitor
     end

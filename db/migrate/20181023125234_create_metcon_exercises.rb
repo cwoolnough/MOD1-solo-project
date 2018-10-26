@@ -1,8 +1,6 @@
 class CreateMetconExercises < ActiveRecord::Migration[5.2]
   def change
     create_table :metcon_exercises do |t|
-      t.string :metcon
-      t.string :exercise
       t.belongs_to :metcon
       t.belongs_to :exercise
     end
